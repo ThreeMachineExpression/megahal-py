@@ -453,7 +453,7 @@ class MegaHAL(object):
         """Have a friendly chat session.. ^D to exit"""
         while True:
             try:
-                phrase = raw_input('>>> ')
+                phrase = input('>>> ')
             except EOFError:
                 break
             if phrase:
