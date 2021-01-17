@@ -434,7 +434,7 @@ class MegaHAL(object):
         with open(file, 'rb') as fp:
             for line in fp:
                 line = line.strip()
-                if line and not line.startswith('#'):
+                if line and not line.startswith(b'#'):
                     self.learn(line)
 
     def learn(self, phrase):
