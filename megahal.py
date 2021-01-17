@@ -431,10 +431,10 @@ class MegaHAL(object):
 
     def train(self, file):
         """Train the brain with textfile, each line is a phrase"""
-        with open(file, 'rb') as fp:
+        with open(file, 'r') as fp:
             for line in fp:
                 line = line.strip()
-                if line and not line.startswith(b'#'):
+                if line and not line.startswith('#'):
                     self.learn(line)
 
     def learn(self, phrase):
